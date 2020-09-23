@@ -10,8 +10,8 @@ jobs:
   build:
     strategy:
       matrix:
-        scheme: [tx-small, tx-full]
-    name: Build texlive using the ${{ matrix.scheme }}-Profile
+        profile: [tx-small, tx-full]
+    name: Build texlive using the ${{ matrix.profile }}-Profile
     runs-on: ubuntu-latest
     steps:
       - name: Set up Git repository
@@ -22,19 +22,19 @@ jobs:
 
       - name: Build the image
         run: |
-          docker build -t lithie-${{ matrix.scheme }} --build-arg target_profile=${{ matrix.scheme }} .
+          docker build -t lithie-${{ matrix.profile }} --build-arg target_profile=${{ matrix.profile }} .
 
       - name: Test that the image installed correctly
         run: |
-          docker run --rm lithie-${{ matrix.scheme }} pdflatex --version
-          docker run --rm lithie-${{ matrix.scheme }} latexmk --version
+          docker run --rm lithie-${{ matrix.profile }} pdflatex --version
+          docker run --rm lithie-${{ matrix.profile }} latexmk --version
 
       - name: Deploy the image
         run: |
-          TAG="ghcr.io/EagleoutIce/lithie-${{ matrix.scheme }}"
+          TAG="ghcr.io/EagleoutIce/lithie-${{ matrix.profile }}"
           VERSION="$(date "+%Y%m%d")"
-          docker tag lithie-${{ matrix.scheme }} ${TAG}:$VERSION
-          docker tag lithie-${{ matrix.scheme }} ${TAG}:latest
+          docker tag lithie-${{ matrix.profile }} ${TAG}:$VERSION
+          docker tag lithie-${{ matrix.profile }} ${TAG}:latest
           docker images $TAG
           echo ${{ secrets.GHCR_IO }} | docker login ghcr.io -u $GITHUB_ACTOR --password-stdin
           docker push $TAG
