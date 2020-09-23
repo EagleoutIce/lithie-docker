@@ -55,13 +55,10 @@ cd ${TX_UNZIP}
 ./install-tl -profile=/profiles/${TARGET_PROFILE}.profile
 
 # install additional packages, if present
-PACKAGE_LOC="profiles/${TARGET_PROFILE}.packages"
-if [ -f "${PACKAGE_LOC}" ]; then
-    AD_PACKAGES=$(cat ${PACKAGE_LOC})
-    if [ -n ${AD_PACKAGES} ]; then
-        echo " - Installing additional packages: \"${AD_PACKAGES}\""
-        tlmgr install ${AD_PACKAGES}
-    fi
+PROFILE_AD="/profiles/${TARGET_PROFILE}.sh"
+if [ -f "${PROFILE_AD}" ]; then
+    echo "Running profile specific post-install script: \"${PROFILE_AD}\" (bash)"
+    bash ${PROFILE_AD}
 fi
 
 echo "Cleaning up afterwards to get a smaller container"
@@ -75,3 +72,5 @@ rm -rf \
   /profiles/ \
   /texlive.asc \
   ${WOKRING_DIR}
+
+echo "Setup completed!"
