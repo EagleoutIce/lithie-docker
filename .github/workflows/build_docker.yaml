@@ -4,8 +4,8 @@ name: Build docker-images
     branches:  
       - master
   schedule:
-    # every two days build automatically
-    - cron: '0 0 */2 * *'
+    # every two months build automatically
+    - cron: '0 0 1 */2 *'
   workflow_dispatch:
 jobs:
   build:
@@ -32,7 +32,7 @@ jobs:
 
       - name: Deploy the image
         run: |
-          TAG="ghcr.io/eagleoutice/lithie-${{ matrix.profile }}"
+          TAG="eagleoutice/lithie-${{ matrix.profile }}"
           VERSION="$(date "+%Y%m%d")"
           docker tag lithie-${{ matrix.profile }} ${TAG}:$VERSION
           docker tag lithie-${{ matrix.profile }} ${TAG}:latest
