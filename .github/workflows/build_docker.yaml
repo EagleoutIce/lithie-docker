@@ -36,5 +36,5 @@ jobs:
           docker tag lithie-${{ matrix.profile }} ${TAG}:$VERSION
           docker tag lithie-${{ matrix.profile }} ${TAG}:latest
           docker images $TAG
-          echo ${{ secrets.GHCR_IO }} | docker login ghcr.io -u $GITHUB_ACTOR --password-stdin
+          echo ${{ secrets.DH_PASSWD }} | docker login -u ${{ secrets.DH_NAME }} --password-stdin
           docker push $TAG

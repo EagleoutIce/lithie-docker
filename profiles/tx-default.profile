@@ -2,6 +2,7 @@
 # texlive.profile written on Wed Sep 23 02:27:55 2020 UTC
 # It will NOT be updated and reflects only the
 # installation profile at installation time.
+# TODO remove fonts and add manually as ~3gigs is nuts
 selected_scheme scheme-custom
 TEXDIR /opt/texlive/texdir
 TEXMFCONFIG $TEXMFSYSCONFIG
