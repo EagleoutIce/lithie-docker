@@ -5,7 +5,7 @@ name: Build docker-images
       - master
   schedule:
     # every two days build automatically
-    - cron: '0 0 2 * *'
+    - cron: '0 0 */2 * *'
   workflow_dispatch:
 jobs:
   build:

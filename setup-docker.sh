@@ -12,7 +12,7 @@ echo "Running setup for target-profile \"${TARGET_PROFILE}\""
 
 echo " - Install Packages"
 # Install wanted packages
-apk add --update --no-cache bash python3 tar wget gnupg ghostscript perl
+apk add --update --no-cache bash python3 tar wget gnupg ghostscript perl xz
 echo " - Setup python"
 ln -sf python3 /usr/bin/python
 python3 -m ensurepip
