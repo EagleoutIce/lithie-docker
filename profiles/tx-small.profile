@@ -10,7 +10,7 @@ TEXMFLOCAL /opt/texlive/texdir/texmf-local
 TEXMFSYSCONFIG /opt/texlive/texdir/texmf-config
 TEXMFSYSVAR /opt/texlive/texdir/texmf-var
 TEXMFVAR $TEXMFSYSVAR
-binary_x86_64-linux 1
+binary_x86_64-linux 0
 binary_x86_64-linuxmusl 1
 collection-basic 1
 collection-fontsrecommended 1

@@ -1,8 +1,7 @@
 # See: https://tug.org/texlive/doc/install-tl.html#PROFILES
-# texlive.profile written on Wed Sep 23 00:41:14 2020 UTC
+# texlive.profile written on Wed Sep 23 02:27:55 2020 UTC
 # It will NOT be updated and reflects only the
 # installation profile at installation time.
-# TODO: maybe remove hello message?
 selected_scheme scheme-custom
 TEXDIR /opt/texlive/texdir
 TEXMFCONFIG $TEXMFSYSCONFIG
@@ -16,30 +15,15 @@ binary_x86_64-linuxmusl 1
 collection-basic 1
 collection-bibtexextra 1
 collection-binextra 1
-collection-context 1
 collection-fontsextra 1
 collection-fontsrecommended 1
 collection-fontutils 1
 collection-formatsextra 1
 collection-games 1
 collection-humanities 1
-collection-langarabic 1
-collection-langchinese 1
-collection-langcjk 1
-collection-langcyrillic 1
-collection-langczechslovak 1
 collection-langenglish 1
 collection-langeuropean 1
-collection-langfrench 1
 collection-langgerman 1
-collection-langgreek 1
-collection-langitalian 1
-collection-langjapanese 1
-collection-langkorean 1
-collection-langother 1
-collection-langpolish 1
-collection-langportuguese 1
-collection-langspanish 1
 collection-latex 1
 collection-latexextra 1
 collection-latexrecommended 1
@@ -51,7 +35,6 @@ collection-pictures 1
 collection-plaingeneric 1
 collection-pstricks 1
 collection-publishers 1
-collection-texworks 1
 collection-xetex 1
 instopt_adjustpath 0
 instopt_adjustrepo 1
@@ -61,8 +44,8 @@ instopt_write18_restricted 1
 tlpdbopt_autobackup 1
 tlpdbopt_backupdir tlpkg/backups
 tlpdbopt_create_formats 1
-tlpdbopt_desktop_integration 0
-tlpdbopt_file_assocs 0
+tlpdbopt_desktop_integration 1
+tlpdbopt_file_assocs 1
 tlpdbopt_generate_updmap 0
 tlpdbopt_install_docfiles 0
 tlpdbopt_install_srcfiles 0

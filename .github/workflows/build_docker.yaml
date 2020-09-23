@@ -10,7 +10,7 @@ jobs:
   build:
     strategy:
       matrix:
-        profile: [tx-small, tx-full]
+        profile: [tx-small, tx-full, tx-default]
     name: Build texlive using the ${{ matrix.profile }}-Profile
     runs-on: ubuntu-latest
     steps:
