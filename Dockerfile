@@ -9,7 +9,6 @@ ENV PYTHONUNBUFFERED=1 PYTHONDONTWRITEBYTECODE=1 PATH="${PATH}:/opt/texlive/texd
 COPY README.md setup-docker.sh LICENSE /
 COPY profiles/ /profiles/
 
-RUN chmod +x /setup-docker.sh
-RUN /setup-docker.sh ${target_profile}
+RUN chmod +x /setup-docker.sh && /setup-docker.sh ${target_profile}
 
 CMD ["/bin/bash"]
