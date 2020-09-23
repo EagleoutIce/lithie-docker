@@ -2,6 +2,7 @@
 # texlive.profile written on Wed Sep 23 00:41:14 2020 UTC
 # It will NOT be updated and reflects only the
 # installation profile at installation time.
+# TODO: maybe remove hello message?
 selected_scheme scheme-custom
 TEXDIR /opt/texlive/texdir
 TEXMFCONFIG $TEXMFSYSCONFIG
