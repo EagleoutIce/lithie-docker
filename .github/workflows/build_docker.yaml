@@ -31,10 +31,10 @@ jobs:
 
       - name: Deploy the image
         run: |
-          TAG="ghcr.io/EagleoutIce/lithie-$SCHEME"
+          TAG="ghcr.io/EagleoutIce/lithie-${{ matrix.scheme }}"
           VERSION="$(date "+%Y%m%d")"
-          docker tag lithie-$SCHEME ${TAG}:$VERSION
-          docker tag lithie-$SCHEME ${TAG}:latest
+          docker tag lithie-${{ matrix.scheme }} ${TAG}:$VERSION
+          docker tag lithie-${{ matrix.scheme }} ${TAG}:latest
           docker images $TAG
           echo ${{ secrets.GHCR_IO }} | docker login ghcr.io -u $GITHUB_ACTOR --password-stdin
           docker push $TAG
