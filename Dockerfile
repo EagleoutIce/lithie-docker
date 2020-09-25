@@ -12,6 +12,10 @@ ENV PYTHONUNBUFFERED=1 PYTHONDONTWRITEBYTECODE=1 PATH="${PATH}:/opt/texlive/texd
 COPY README.md setup-docker.sh LICENSE sltx-dep.yaml /
 COPY profiles/ /profiles/
 
+USER root
+
 RUN chmod +x /setup-docker.sh && /setup-docker.sh ${target_profile}
+
+USER lithie-user
 
 CMD ["/bin/bash"]

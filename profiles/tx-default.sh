@@ -9,4 +9,14 @@ rm -rf \
     /opt/texlive/texdir/texmf-dist/fonts/vf/public/japanese-uptex \
     /opt/texlive/texdir/texmf-dist/fonts/vf/public/jlreq \
     /opt/texlive/texdir/texmf-dist/fonts/type1/huerta \
-    /opt/texlive/texdir/texmf-dist/fonts/type1/public/cbfonts
+    /opt/texlive/texdir/texmf-dist/fonts/type1/public/cbfonts \
+    /opt/texlive/texdir/texmf-dist/scripts/tlcockpit \
+    /opt/texlive/texdir/texmf-dist/scripts/arara \
+    /opt/texlive/texdir/texmf-dist/tex/latex/schule \
+    /opt/texlive/texdir/texmf-dist/tex/generic/pst-geo \
+    /opt/texlive/texdir/texmf-dist/fonts/opentype \
+    /opt/texlive/texdir/texmf-dist/fonts/afm \
+    /opt/texlive/texdir/texmf-dist/fonts/type1/google \
+    /opt/texlive/texdir/texmf-dist/fonts/truetype/google \
+    /opt/texlive/texdir/texmf-dist/fonts/source \
+    /opt/texlive/texdir/texmf-dist/tex/latex/merriweather

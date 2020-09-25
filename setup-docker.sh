@@ -3,6 +3,9 @@
 # Exit immediately if command nonzero
 set -eu
 
+# Init user
+addgroup lithie-group && adduser lithie-user --home /root -D -G lithie-group
+
 # Desired profile for container
 TARGET_PROFILE="$1"
 
@@ -75,6 +78,6 @@ rm -rf \
   ${WOKRING_DIR}
 
 # building packages
-apk del --no-cache gnupg xz git
+apk del --no-cache gnupg xz git wget
 
 echo "Setup completed!"
