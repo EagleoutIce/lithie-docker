@@ -4,13 +4,13 @@
 # installation profile at installation time.
 # TODO remove fonts and add manually as ~3gigs is nuts
 selected_scheme scheme-custom
-TEXDIR /opt/texlive/texdir
-TEXMFCONFIG $TEXMFSYSCONFIG
-TEXMFHOME $TEXMFLOCAL
-TEXMFLOCAL /opt/texlive/texdir/texmf-local
-TEXMFSYSCONFIG /opt/texlive/texdir/texmf-config
-TEXMFSYSVAR /opt/texlive/texdir/texmf-var
-TEXMFVAR $TEXMFSYSVAR
+TEXDIR          /opt/texlive/texdir
+TEXMFSYSCONFIG  /opt/texlive/texdir/texmf-config
+TEXMFLOCAL      /opt/texlive/texdir/texmf-local
+TEXMFSYSVAR     /opt/texlive/texdir/texmf-var
+TEXMFCONFIG     /home/lithie-user/texlive/texmf-config
+TEXMFHOME       /home/lithie-user/texmf
+TEXMFVAR        /home/lithie-user/texlive/texmf-var
 binary_x86_64-linux 0
 binary_x86_64-linuxmusl 1
 collection-basic 1
@@ -42,10 +42,9 @@ instopt_adjustrepo 1
 instopt_letter 0
 instopt_portable 0
 instopt_write18_restricted 1
-tlpdbopt_autobackup 1
-tlpdbopt_backupdir tlpkg/backups
+tlpdbopt_autobackup 0
 tlpdbopt_create_formats 1
-tlpdbopt_desktop_integration 1
+tlpdbopt_desktop_integration 0
 tlpdbopt_file_assocs 1
 tlpdbopt_generate_updmap 0
 tlpdbopt_install_docfiles 0

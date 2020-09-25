@@ -29,6 +29,7 @@ jobs:
         run: |
           docker run --rm lithie-${{ matrix.profile }} pdflatex --version
           docker run --rm lithie-${{ matrix.profile }} latexmk --version
+          docker run --rm lithie-${{ matrix.profile }} sltx version
 
       - name: Deploy the image
         run: |
