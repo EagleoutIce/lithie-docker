@@ -5,6 +5,9 @@
 # Exit immediately if command nonzero
 set -eu
 
+# Init user
+addgroup -S lithie-group && adduser -S lithie-user -G lithie-group
+
 # Desired profile for container
 TARGET_PROFILE="$1"
 

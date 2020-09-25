@@ -1,5 +1,7 @@
 FROM alpine:latest
 
+LABEL version="1.0" author="Florian Sihler" git="https://github.com/EagleoutIce/lithie-docker"
+
 # Profile
 ARG target_profile=tx-small
 # Add the final texlive to the path and
@@ -10,5 +12,7 @@ COPY README.md setup-docker.sh LICENSE /
 COPY profiles/ /profiles/
 
 RUN chmod +x /setup-docker.sh && /setup-docker.sh ${target_profile}
+
+USER lithie-user
 
 CMD ["/bin/bash"]
