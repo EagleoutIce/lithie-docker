@@ -9,11 +9,9 @@ ARG target_profile=tx-small
 # Configure Python
 ENV PYTHONUNBUFFERED=1 PYTHONDONTWRITEBYTECODE=1 PATH="${PATH}:/opt/texlive/texdir/bin/x86_64-linuxmusl"
 
-COPY README.md setup-docker.sh LICENSE /
+COPY README.md setup-docker.sh LICENSE sltx-dep.yaml /
 COPY profiles/ /profiles/
 
 RUN chmod +x /setup-docker.sh && /setup-docker.sh ${target_profile}
-
-USER lithie-user
 
 CMD ["/bin/bash"]

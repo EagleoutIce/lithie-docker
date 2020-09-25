@@ -1,12 +1,7 @@
 #!/bin/sh
 
-# TODO: install sltx aswell, as soon as it can compile :D
-
 # Exit immediately if command nonzero
 set -eu
-
-# Init user
-addgroup -S lithie-group && adduser -S lithie-user -G lithie-group
 
 # Desired profile for container
 TARGET_PROFILE="$1"
@@ -15,7 +10,7 @@ echo "Running setup for target-profile \"${TARGET_PROFILE}\""
 
 echo " - Install Packages"
 # Install wanted packages
-apk add --update --no-cache bash python3 tar wget gnupg ghostscript perl xz
+apk add --update --no-cache bash python3 tar wget gnupg ghostscript perl xz git
 echo " - Setup python"
 ln -sf python3 /usr/bin/python
 python3 -m ensurepip
@@ -55,6 +50,7 @@ tar --strip-components 1 -zxf ./install-tl-unx.tar.gz -C ${WOKRING_DIR}/${TX_UNZ
 cd ${TX_UNZIP}
 
 # Run the installer
+# TODO: retry if it failes
 ./install-tl -profile=/profiles/${TARGET_PROFILE}.profile
 
 # install additional packages, if present
@@ -74,6 +70,11 @@ rm -rf \
   /setup-docker.sh \
   /profiles/ \
   /texlive.asc \
+  /sltx-dep.yaml \
+  /var/cache/apk/* \
   ${WOKRING_DIR}
+
+# building packages
+apk del --no-cache gnupg xz git
 
 echo "Setup completed!"

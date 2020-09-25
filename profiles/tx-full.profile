@@ -8,9 +8,9 @@ TEXDIR          /opt/texlive/texdir
 TEXMFSYSCONFIG  /opt/texlive/texdir/texmf-config
 TEXMFLOCAL      /opt/texlive/texdir/texmf-local
 TEXMFSYSVAR     /opt/texlive/texdir/texmf-var
-TEXMFCONFIG     /home/lithie-user/texlive/texmf-config
-TEXMFHOME       /home/lithie-user/texmf
-TEXMFVAR        /home/lithie-user/texlive/texmf-var
+TEXMFCONFIG     /root/texlive/texmf-config
+TEXMFHOME       /root/texmf
+TEXMFVAR        /root/texlive/texmf-var
 binary_x86_64-linux 0
 binary_x86_64-linuxmusl 1
 collection-basic 1
