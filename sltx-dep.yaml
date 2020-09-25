@@ -1,4 +1,4 @@
-target: lecture-digital-example
+target: docker-container
 dependencies:
     random-intropoem:
       url: https://github.com/EagleoutIce/random-intropoem

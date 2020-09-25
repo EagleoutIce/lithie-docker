@@ -63,6 +63,8 @@ if [ -f "${PROFILE_AD}" ]; then
     bash ${PROFILE_AD}
 fi
 
+mktexfmt pdflatex.fmt
+
 echo "Cleaning up afterwards to get a smaller container"
 # We clean doc and source to, if some profile wants to install them anyway
 rm -rf \
