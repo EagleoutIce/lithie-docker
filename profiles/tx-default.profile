@@ -14,18 +14,19 @@ TEXMFVAR        /root/texlive/texmf-var
 binary_x86_64-linux 0
 binary_x86_64-linuxmusl 1
 collection-basic 1
-collection-bibtexextra 0
+collection-bibtexextra 1
+collection-binextra 0
 # => latemk bibtex8 xindy texliveonfly texdef texloganalyser
-collection-binextra 1
-collection-fontsextra 1
+collection-fontsextra 0
+# => academicons anonymouspro aurical barcodes calligra calligra-type1 crimson crimsonpro dejavu ebgaramond ebgaramond-maths euxm fontawesome fourier initials kpfonts montserrat sourcecodepro xcharter
 collection-fontsrecommended 1
 collection-fontutils 1
 # TODO: i have to shorten this :C
-collection-formatsextra 1
+collection-formatsextra 0
 collection-games 1
 collection-humanities 0
 collection-langenglish 1
-collection-langeuropean 1
+collection-langeuropean 0
 collection-langgerman 1
 collection-latex 1
 collection-latexextra 1
@@ -37,7 +38,7 @@ collection-music 1
 collection-pictures 1
 collection-plaingeneric 1
 collection-pstricks 0
-collection-publishers 1
+collection-publishers 0
 collection-xetex 0
 instopt_adjustpath 0
 instopt_adjustrepo 1
