@@ -14,14 +14,16 @@ TEXMFVAR        /root/texlive/texmf-var
 binary_x86_64-linux 0
 binary_x86_64-linuxmusl 1
 collection-basic 1
-collection-bibtexextra 1
+collection-bibtexextra 0
+# => latemk bibtex8 xindy texliveonfly texdef texloganalyser
 collection-binextra 1
 collection-fontsextra 1
 collection-fontsrecommended 1
 collection-fontutils 1
+# TODO: i have to shorten this :C
 collection-formatsextra 1
 collection-games 1
-collection-humanities 1
+collection-humanities 0
 collection-langenglish 1
 collection-langeuropean 1
 collection-langgerman 1
@@ -34,9 +36,9 @@ collection-metapost 1
 collection-music 1
 collection-pictures 1
 collection-plaingeneric 1
-collection-pstricks 1
+collection-pstricks 0
 collection-publishers 1
-collection-xetex 1
+collection-xetex 0
 instopt_adjustpath 0
 instopt_adjustrepo 1
 instopt_letter 0

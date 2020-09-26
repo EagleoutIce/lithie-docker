@@ -1,3 +1,4 @@
+tlmgr install latemk biblatex biber bibtex8 xindy texliveonfly texdef texloganalyser
 pip install sltx
 # TODO: pip should install all dependencies and setup texmf => get lithie-util
 sltx dependency /sltx-dep.yaml
@@ -19,4 +20,7 @@ rm -rf \
     /opt/texlive/texdir/texmf-dist/fonts/type1/google \
     /opt/texlive/texdir/texmf-dist/fonts/truetype/google \
     /opt/texlive/texdir/texmf-dist/fonts/source \
-    /opt/texlive/texdir/texmf-dist/tex/latex/merriweather
+    /opt/texlive/texdir/texmf-dist/tex/latex/merriweather \
+    /opt/texlive/texdir/texmf-dist/fonts/type1/public/ipaex-type1 \
+    /opt/texlive/texdir/texmf-dist/fonts/type3 \
+    /opt/texlive/texdir/texmf-dist/fonts/type3
