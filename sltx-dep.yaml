@@ -15,3 +15,10 @@ dependencies:
       grab-files: ["**/*.sty=>./","**/*.cls=>./"]
       grab-dirs: ["sopra-listings/Languages=>Languages/"]
       dep: sltx-dep.yml
+    beamer-themes:
+      url: https://github.com/EagleoutIce/beamer-themes
+      grab-files: ["**/*.sty=>./"]
+    tikz-bricks:
+      url: https://github.com/EagleoutIce/tikz-bricks
+      grab-files: ["*.sty"]
+# TODO: copy tree img for eagle-maps with better name
