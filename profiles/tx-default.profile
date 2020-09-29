@@ -19,11 +19,11 @@ collection-binextra 0
 # => latemk bibtex8 xindy texliveonfly texdef texloganalyser
 collection-fontsextra 0
 # => academicons anonymouspro aurical barcodes calligra calligra-type1 crimson crimsonpro dejavu ebgaramond ebgaramond-maths euxm fontawesome fourier initials kpfonts montserrat sourcecodepro xcharter
-collection-fontsrecommended 1
+collection-fontsrecommended 0
+# => charter cm-super cmextra courier euro eurosym helvetic marvosym tipa tex-gyre wasy wasy-type1 wasysym
 collection-fontutils 1
-# TODO: i have to shorten this :C
 collection-formatsextra 0
-collection-games 1
+collection-games 0
 collection-humanities 0
 collection-langenglish 1
 collection-langeuropean 0
@@ -31,10 +31,10 @@ collection-langgerman 1
 collection-latex 1
 collection-latexextra 1
 collection-latexrecommended 1
-collection-luatex 1
+collection-luatex 0
 collection-mathscience 1
-collection-metapost 1
-collection-music 1
+collection-metapost 0
+collection-music 0
 collection-pictures 1
 collection-plaingeneric 1
 collection-pstricks 0

@@ -63,10 +63,12 @@ if [ -f "${PROFILE_AD}" ]; then
     bash ${PROFILE_AD}
 fi
 
+echo "Setup texmf home"
 # We want another texmf-home to work with
 mkdir -p /usr/share/sltx/texmf
 tlmgr conf texmf TEXMFHOME "/root/texmf:/usr/share/sltx/texmf"
 
+echo "Rerun of mktexfmt"
 mktexfmt pdflatex.fmt
 
 echo "Cleaning up afterwards to get a smaller container"
