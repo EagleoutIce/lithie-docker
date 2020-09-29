@@ -1,7 +1,7 @@
-tlmgr install latexmk biblatex biber bibtex8 xindy texliveonfly texdef texloganalyser \
-    academicons anonymouspro aurical barcodes calligra calligra-type1 crimson crimsonpro \
-    dejavu ebgaramond ebgaramond-maths euxm fontawesome fourier initials kpfonts \
-    montserrat sourcecodepro xcharter overlock ly1 biblatex-ieee
+tlmgr install latexmk biblatex biber bibtex8 xindy texliveonfly \
+    anonymouspro aurical calligra calligra-type1 crimson crimsonpro \
+    dejavu ebgaramond ebgaramond-maths euxm fontawesome initials kpfonts \
+    montserrat sourcecodepro xcharter overlock ly1 CormorantGaramond
 pip install sltx
 # TODO: pip should install all dependencies and setup texmf => get lithie-util
 sltx dependency /sltx-dep.yaml
