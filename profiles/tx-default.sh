@@ -2,7 +2,7 @@ tlmgr install latexmk biblatex biber bibtex8 xindy texliveonfly texdef texlogana
     academicons anonymouspro aurical barcodes calligra calligra-type1 crimson crimsonpro \
     ebgaramond ebgaramond-maths euxm fontawesome fourier initials kpfonts \
     montserrat sourcecodepro xcharter overlock ly1 cormorantgaramond charter cm-super \
-    cmextra courier euro eurosym helvetic marvosym tipa tex-gyre wasy wasy-type1 wasysym
+    cmextra courier euro eurosym helvetic marvosym tipa tex-gyre wasy wasy-type1 wasysym cyrillic
     
 pip install sltx
 # TODO: pip should install all dependencies and setup texmf => get lithie-util
