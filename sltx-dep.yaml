@@ -21,4 +21,7 @@ dependencies:
     tikz-bricks:
       url: https://github.com/EagleoutIce/tikz-bricks
       grab-files: ["*.sty"]
+    lithie-boxes:
+      url: https://github.com/EagleoutIce/lithie-boxes
+      grab-files: ["*.sty", "*.style"]
 # TODO: copy tree img for eagle-maps with better name
