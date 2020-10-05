@@ -14,14 +14,14 @@ TEXMFVAR        /root/texlive/texmf-var
 binary_x86_64-linux 0
 binary_x86_64-linuxmusl 1
 collection-basic 1
-collection-bibtexextra 1
+collection-bibtexextra 0
 collection-binextra 0
 # => latemk bibtex8 xindy texliveonfly texdef texloganalyser
 collection-fontsextra 0
 # => academicons anonymouspro aurical barcodes calligra calligra-type1 crimson crimsonpro dejavu ebgaramond ebgaramond-maths euxm fontawesome fourier initials kpfonts montserrat sourcecodepro xcharter
 collection-fontsrecommended 0
 # => charter cm-super cmextra courier euro eurosym helvetic marvosym tipa tex-gyre wasy wasy-type1 wasysym
-collection-fontutils 1
+collection-fontutils 0
 collection-formatsextra 0
 collection-games 0
 collection-humanities 0

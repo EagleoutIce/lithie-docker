@@ -32,14 +32,14 @@ wget -q https://tug.org/texlive/files/texlive.asc
 gpg --no-default-keyring --keyring trustedkeys.kbx --import texlive.asc
 
 # We need a link to get the newest install-tl from:
-MIRROR_URL=$(wget -qS --spider --tries 6 http://mirror.ctan.org/ 2>&1 | sed -ne 's/.*Location: \(\w*\)/\1/p' | head -n 1)
+MIRROR_URL=$(wget -qS --spider --tries 5 http://mirror.ctan.org/ 2>&1 | sed -ne 's/.*Location: \(\w*\)/\1/p' | head -n 1)
 echo "   - Using mirror ${MIRROR_URL}"
 
 echo " - Starting download"
 download_tl() {
     final_url="${MIRROR_URL}systems/texlive/tlnet/install-tl-unx.tar.gz$1"
     echo "   - Trying to download \"${final_url}\""
-    wget -nv --tries 6 "${final_url}"
+    wget -nv --tries 5 "${final_url}"
 }
 download_tl ""
 download_tl ".sha512" # get the sha
@@ -85,7 +85,7 @@ rm -rf \
   /var/cache/apk/* \
   ${WOKRING_DIR}
 
-# building packages
-apk del --no-cache gnupg xz git wget
+# removing the building packages
+apk del --no-cache gnupg tar wget
 
 echo "Setup completed!"
