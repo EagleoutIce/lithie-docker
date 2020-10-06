@@ -1,7 +1,7 @@
 name: Build docker-images
 'on':
-  push: 
-    branches:  
+  push:
+    branches:
       - master
   schedule:
     # every two months build automatically
@@ -11,7 +11,7 @@ jobs:
   build:
     strategy:
       matrix:
-        profile: [tx-small, tx-full, tx-default]
+        profile: [tx-default, tx-small, tx-full]
     name: Build texlive using the ${{ matrix.profile }}-Profile
     runs-on: ubuntu-latest
     steps:
@@ -19,7 +19,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           lfs: false
-          submodules: true
+          submodules: false
 
       - name: Build the image
         run: |
