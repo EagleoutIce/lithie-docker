@@ -69,7 +69,7 @@ sltx dependency /sltx-dep.yaml
 echo "Setup texmf home"
 # We want another texmf-home to work with (for sltx)
 mkdir -p /usr/share/sltx/texmf
-tlmgr conf texmf TEXMFHOME "/root/texmf:/usr/share/sltx/texmf"
+tlmgr conf texmf TEXMFHOME "/usr/share/sltx/texmf:/root/texmf"
 
 echo "Rerun of mktexfmt"
 mktexfmt pdflatex.fmt
