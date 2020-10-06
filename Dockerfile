@@ -10,7 +10,8 @@ ARG target_profile=tx-small
 ENV openout_any='a' PYTHONUNBUFFERED=1 PYTHONDONTWRITEBYTECODE=1 PATH="${PATH}:/opt/texlive/texdir/bin/x86_64-linuxmusl"
 
 COPY setup-docker.sh LICENSE sltx-dep.yaml /
-COPY profiles/ /profiles/
+COPY profiles/${target_profile}.profile profiles/${target_profile}.sh \
+     /profiles/
 
 USER root
 

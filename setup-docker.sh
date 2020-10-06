@@ -63,8 +63,11 @@ if [ -f "${PROFILE_AD}" ]; then
     bash ${PROFILE_AD}
 fi
 
+pip install sltx
+sltx dependency /sltx-dep.yaml
+
 echo "Setup texmf home"
-# We want another texmf-home to work with
+# We want another texmf-home to work with (for sltx)
 mkdir -p /usr/share/sltx/texmf
 tlmgr conf texmf TEXMFHOME "/root/texmf:/usr/share/sltx/texmf"
 
@@ -83,6 +86,7 @@ rm -rf \
   /texlive.asc \
   /sltx-dep.yaml \
   /var/cache/apk/* \
+  /sltx-drivers.log \
   ${WOKRING_DIR}
 
 # removing the building packages
