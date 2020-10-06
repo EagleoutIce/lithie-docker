@@ -66,13 +66,17 @@ fi
 pip install sltx
 sltx dependency /sltx-dep.yaml
 
-echo "Setup texmf home"
+echo "Setup texmf home and Folder permission"
 # We want another texmf-home to work with (for sltx)
 mkdir -p /usr/share/sltx/texmf
 tlmgr conf texmf TEXMFHOME "/usr/share/sltx/texmf:/root/texmf"
+# Folder permissions
+chmod 775 /usr/share/sltx/texmf
+chmod 775 /root/texmf
 
 echo "Rerun of mktexfmt"
 mktexfmt pdflatex.fmt
+mktexfmt latex.fmt
 
 echo "Cleaning up afterwards to get a smaller container"
 # We clean doc and source to, if some profile wants to install them anyway
