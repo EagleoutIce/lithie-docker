@@ -3,7 +3,7 @@ tlmgr install latexmk biblatex biber bibtex8 xindy texliveonfly texdef texlogana
     ebgaramond ebgaramond-maths euxm fontawesome fourier initials kpfonts \
     montserrat xcharter overlock ly1 cormorantgaramond charter cm-super \
     cmextra courier euro eurosym helvetic marvosym tipa tex-gyre wasy wasy-type1 wasysym cyrillic biblatex-ieee
-    
+
 pip install sltx
 # TODO: pip should install all dependencies and setup texmf => get lithie-util
 sltx dependency /sltx-dep.yaml
