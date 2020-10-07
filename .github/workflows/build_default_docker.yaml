@@ -1,17 +1,14 @@
 name: Build docker-images
 'on':
   push:
-    tags:
-      - 'v*'
-  schedule:
-    # every two months build automatically
-    - cron: '0 0 1 */2 *'
+    branches:
+      - master
   workflow_dispatch:
 jobs:
   build:
     strategy:
       matrix:
-        profile: [tx-default, tx-small, tx-full]
+        profile: [tx-default]
       fail-fast: false
     name: Build texlive using the ${{ matrix.profile }}-Profile
     runs-on: ubuntu-latest
