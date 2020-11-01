@@ -25,6 +25,10 @@ rm -rf \
   /opt/texlive/texdir/texmf-var/web2c/tlmgr.log \
   /root/.gnupg \
   /update-docker.sh \
+  /opt/texlive/texdir/texmf-var/web2c/updmap.log \
+  /opt/texlive/texdir/texmf-var/web2c/tlmgr-commands.log \
+  /root/texlive/texmf-var/web2c/pdftex/latex.log \
+  /root/texlive/texmf-var/web2c/pdftex/pdflatex.log \
   /profiles/ \
   /sltx-dep.yaml \
   /sltx-drivers.log \
