@@ -21,6 +21,9 @@ dependencies:
     tikz-bricks:
       url: https://github.com/EagleoutIce/tikz-bricks
       grab-files: ["*.sty"]
+    lilly-colors:
+      url: https://github.com/EagleoutIce/lilly-colors
+      grab-files: ["*.sty"]
     lithie-boxes:
       url: https://github.com/EagleoutIce/lithie-boxes
       grab-files: ["*.sty", "*.style"]
