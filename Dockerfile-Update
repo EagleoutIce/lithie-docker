@@ -5,8 +5,7 @@ FROM eagleoutice/lithie-${target_profile}-base:latest
 
 LABEL version="1.0" author="Florian Sihler" git="https://github.com/EagleoutIce/lithie-docker"
 
-COPY LICENSE sltx-dep.yaml update-docker.sh/
-
+COPY LICENSE sltx-dep.yaml update-docker.sh /
 
 USER root
 

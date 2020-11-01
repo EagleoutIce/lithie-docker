@@ -1,5 +1,4 @@
-![Build docker-images](https://github.com/EagleoutIce/lithie-docker/workflows/Build%20docker-images/badge.svg) [![Dockerhub](https://img.shields.io/badge/Dockerhub-Images-informational)](https://hub.docker.com/u/eagleoutice) ![Build default docker-image](https://github.com/EagleoutIce/lithie-docker/workflows/Build%20default%20docker-image/badge.svg)
-
+![Update docker-images](https://github.com/EagleoutIce/lithie-docker/workflows/Update%20docker-images/badge.svg) [![Dockerhub](https://img.shields.io/badge/Dockerhub-Images-informational)](https://hub.docker.com/u/eagleoutice) ![Build docker-image-bases](https://github.com/EagleoutIce/lithie-docker/workflows/Build%20docker-image-bases/badge.svg)
 # lithie-docker
 
 Contains the docker-files to compile lithie-documents.
