@@ -64,7 +64,6 @@ if [ -f "${PROFILE_AD}" ]; then
 fi
 
 pip install sltx
-sltx dependency /sltx-dep.yaml
 
 echo "Setup texmf home and Folder permission"
 # We want another texmf-home to work with (for sltx)
@@ -88,9 +87,7 @@ rm -rf \
   /setup-docker.sh \
   /profiles/ \
   /texlive.asc \
-  /sltx-dep.yaml \
   /var/cache/apk/* \
-  /sltx-drivers.log \
   ${WOKRING_DIR}
 
 # removing the building packages

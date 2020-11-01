@@ -1,14 +1,17 @@
-name: Build default docker-image
+name: Build docker-images bases
 'on':
   push:
-    branches:
-      - master
+    tags:
+      - 'v*'
+  schedule:
+    # every four months build automatically
+    - cron: '0 0 1 */4 *'
   workflow_dispatch:
 jobs:
   build:
     strategy:
       matrix:
-        profile: [tx-default]
+        profile: [tx-default, tx-small, tx-full]
       fail-fast: false
     name: Build texlive using the ${{ matrix.profile }}-Profile
     runs-on: ubuntu-latest
@@ -21,20 +24,19 @@ jobs:
 
       - name: Build the image
         run: |
-          docker build -t lithie-${{ matrix.profile }} --build-arg target_profile=${{ matrix.profile }} .
+          docker build -t lithie-${{ matrix.profile }}-base --build-arg target_profile=${{ matrix.profile }} .
 
       - name: Test that the image installed correctly
         run: |
-          docker run --rm lithie-${{ matrix.profile }} pdflatex --version
-          docker run --rm lithie-${{ matrix.profile }} latexmk --version
-          docker run --rm lithie-${{ matrix.profile }} sltx version
+          docker run --rm lithie-${{ matrix.profile }}-base pdflatex --version
+          docker run --rm lithie-${{ matrix.profile }}-base latexmk --version
 
       - name: Deploy the image
         run: |
-          TAG="eagleoutice/lithie-${{ matrix.profile }}"
+          TAG="eagleoutice/lithie-${{ matrix.profile }}-base"
           VERSION="$(date "+%Y%m%d")"
-          docker tag lithie-${{ matrix.profile }} ${TAG}:$VERSION
-          docker tag lithie-${{ matrix.profile }} ${TAG}:latest
+          docker tag lithie-${{ matrix.profile }}-base ${TAG}:$VERSION
+          docker tag lithie-${{ matrix.profile }}-base ${TAG}:latest
           docker images $TAG
           echo ${{ secrets.DH_PASSWD }} | docker login -u ${{ secrets.DH_NAME }} --password-stdin
           docker push $TAG

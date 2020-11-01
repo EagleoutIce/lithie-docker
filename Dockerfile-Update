@@ -1,17 +1,17 @@
 # Profile
 ARG target_profile=tx-small
 
-FROM eagleoutice/lithie-${target_profile}:latest
+FROM eagleoutice/lithie-${target_profile}-base:latest
 
 LABEL version="1.0" author="Florian Sihler" git="https://github.com/EagleoutIce/lithie-docker"
 
-COPY LICENSE sltx-dep.yaml /
+COPY LICENSE sltx-dep.yaml update-docker.sh/
 
 
 USER root
-RUN pip install --upgrade sltx
-RUN sltx dependency /sltx-dep.yaml
-RUN rm /sltx-dep.yaml /sltx-drivers.log
+
+RUN chmod +x /update-docker.sh && /update-docker.sh ${target_profile}
+
 USER lithie-user
 
 CMD ["/bin/bash"]

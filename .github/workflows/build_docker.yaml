@@ -1,11 +1,8 @@
-name: Build docker-images
+name: Update docker-images
 'on':
   push:
-    tags:
-      - 'v*'
-  schedule:
-    # every two months build automatically
-    - cron: '0 0 1 */2 *'
+    branches:
+      - master
   workflow_dispatch:
 jobs:
   build:
@@ -13,7 +10,7 @@ jobs:
       matrix:
         profile: [tx-default, tx-small, tx-full]
       fail-fast: false
-    name: Build texlive using the ${{ matrix.profile }}-Profile
+    name: Build container using the ${{ matrix.profile }}-base-image
     runs-on: ubuntu-latest
     steps:
       - name: Set up Git repository
@@ -24,7 +21,7 @@ jobs:
 
       - name: Build the image
         run: |
-          docker build -t lithie-${{ matrix.profile }} --build-arg target_profile=${{ matrix.profile }} .
+          docker build -t lithie-${{ matrix.profile }} -f Dockerfile-Update --build-arg target_profile=${{ matrix.profile }} .
 
       - name: Test that the image installed correctly
         run: |
