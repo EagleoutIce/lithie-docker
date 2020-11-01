@@ -1,4 +1,4 @@
-name: Build docker-images bases
+name: Build docker-image-bases
 'on':
   push:
     tags:

@@ -68,6 +68,7 @@ pip install sltx
 echo "Setup texmf home and Folder permission"
 # We want another texmf-home to work with (for sltx)
 mkdir -p /usr/share/sltx/texmf
+mkdir -p /root/texmf
 tlmgr conf texmf TEXMFHOME "/usr/share/sltx/texmf:/root/texmf"
 # Folder permissions
 chmod 775 /usr/share/sltx/texmf
