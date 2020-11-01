@@ -2,6 +2,7 @@
 
 # Exit immediately if command nonzero
 set -eu
+
 # Desired profile for container
 TARGET_PROFILE="$1"
 
@@ -9,7 +10,7 @@ echo "Running update for target-profile \"${TARGET_PROFILE}\""
 
 echo "Update sltx"
 pip install --upgrade sltx
-sltx dependency /sltx-dep.yaml
+sltx -t3 dependency /sltx-dep.yaml
 sltx cls --cache
 
 echo "Rerun of mktexfmt"
@@ -26,8 +27,7 @@ rm -rf \
   /update-docker.sh \
   /profiles/ \
   /sltx-dep.yaml \
-  /sltx-drivers.log
-  /var/cache/apk/* \
-  ${WOKRING_DIR}
+  /sltx-drivers.log \
+  /var/cache/apk/*
 
 echo "Setup completed!"

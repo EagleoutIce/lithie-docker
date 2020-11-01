@@ -1,9 +1,13 @@
-# Profile
 ARG target_profile=tx-small
 
 FROM eagleoutice/lithie-${target_profile}-base:latest
 
 LABEL version="1.0" author="Florian Sihler" git="https://github.com/EagleoutIce/lithie-docker"
+
+# Profile
+ARG target_profile=tx-small
+
+ENV openout_any='a' PYTHONUNBUFFERED=1 PYTHONDONTWRITEBYTECODE=1
 
 COPY LICENSE sltx-dep.yaml update-docker.sh /
 

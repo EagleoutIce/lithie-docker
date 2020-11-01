@@ -3,6 +3,9 @@ name: Update docker-images
   push:
     branches:
       - master
+  schedule:
+    # every monday at night
+    - cron: '0 1 * * 1'
   workflow_dispatch:
 jobs:
   build:

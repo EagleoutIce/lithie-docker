@@ -21,10 +21,10 @@ pip3 install --no-cache --upgrade pip setuptools
 
 echo " - Preparing the texlive installation"
 # Install texlive itself
-WOKRING_DIR=/tmp/install
+WORKING_DIR=/tmp/install
 TX_UNZIP=installer
-mkdir -p ${WOKRING_DIR}/${TX_UNZIP}
-cd ${WOKRING_DIR}
+mkdir -p ${WORKING_DIR}/${TX_UNZIP}
+cd ${WORKING_DIR}
 
 # Retrieve the ascii armor
 echo "   - Retrieving armor from texlive"
@@ -49,7 +49,7 @@ download_tl ".sha512.asc"
 gpgv ./install-tl-unx.tar.gz.sha512.asc ./install-tl-unx.tar.gz.sha512
 sha512sum -c ./install-tl-unx.tar.gz.sha512
 
-tar --strip-components 1 -zxf ./install-tl-unx.tar.gz -C ${WOKRING_DIR}/${TX_UNZIP}
+tar --strip-components 1 -zxf ./install-tl-unx.tar.gz -C ${WORKING_DIR}/${TX_UNZIP}
 cd ${TX_UNZIP}
 
 # Run the installer
@@ -94,7 +94,7 @@ rm -rf \
   /profiles/ \
   /texlive.asc \
   /var/cache/apk/* \
-  ${WOKRING_DIR}
+  ${WORKING_DIR}
 
 # removing the building packages
 apk del --no-cache gnupg tar wget
