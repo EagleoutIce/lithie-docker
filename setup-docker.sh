@@ -54,7 +54,12 @@ cd ${TX_UNZIP}
 
 # Run the installer
 # TODO: retry if it failes
-./install-tl -profile=/profiles/${TARGET_PROFILE}.profile
+ROUND=0
+until [ $ROUND -eq 3 ] || ./install-tl -profile=/profiles/${TARGET_PROFILE}.profile; do
+  sleep 5
+  echo "Retry-Round: $(( ROUND++ ))"
+done
+[ $ROUND -lt 3 ]
 
 # install additional packages, if present
 PROFILE_AD="/profiles/${TARGET_PROFILE}.sh"
