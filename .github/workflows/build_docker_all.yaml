@@ -1,12 +1,5 @@
-name: Update docker-images
+name: Update all docker-images
 'on':
-  push:
-    branches:
-      - master
-      - main
-  schedule:
-    # every monday at night
-    - cron: '0 1 * * 1'
   workflow_dispatch:
 jobs:
   build:
