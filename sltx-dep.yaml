@@ -32,5 +32,7 @@ dependencies:
       grab-files: ["*.sty", "*.cls"]
     lilly:
       url: https://github.com/EagleoutIce/LILLY
-      grab-files: ["Lilly/**/*.cls", "Lilly/source/**/*.sty", "Lilly/source/**/*.def", "Lilly/source/**/*.lox", "Lilly/source/**/*.pro", "Lilly/source/**/*.tex", "Lilly/source/**/*.dict", "Lilly/source/**/GetAll.py",]
-# TODO: copy tree img for eagle-maps with better name
+      grab-files: ["Lilly/**/*.cls", "Lilly/source/**/*.sty", "Lilly/source/**/*.def", "Lilly/source/**/*.lox", "Lilly/source/**/*.pro", "Lilly/source/**/*.tex", "Lilly/source/**/*.dict", "Lilly/source/**/GetAll.py"]
+    bibliography:
+      url: https://github.com/EagleoutIce/bibliography-collection
+      grab-files: ["*.bib"]
