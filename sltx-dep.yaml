@@ -6,7 +6,7 @@ dependencies:
       grab-files: ["*.sty"]
     lithie-util:
       url: https://github.com/EagleoutIce/lithie-util
-      grab-files: ["*.sty"]
+      grab-files: ["*.sty", "*.ist"]
     color-palettes:
       url: https://github.com/EagleoutIce/color-palettes
       grab-files: ["*.sty"]
