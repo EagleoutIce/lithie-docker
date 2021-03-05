@@ -80,7 +80,6 @@ chmod 775 /usr/share/sltx/texmf
 chmod 775 /root/texmf
 
 echo "Rerun of initexmf & mktexfmt"
-initexmf --mkmaps
 mktexfmt pdflatex.fmt
 mktexfmt latex.fmt
 
