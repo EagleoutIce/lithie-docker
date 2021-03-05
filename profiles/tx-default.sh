@@ -1,4 +1,4 @@
-tlmgr install latexmk biblatex biber bibtex8 xindy texliveonfly texdef texloganalyser \
+tlmgr install latexmk biblatex biber bibtex8 texdef texloganalyser \
     academicons anonymouspro aurical barcodes calligra calligra-type1 crimson crimsonpro \
     ebgaramond ebgaramond-maths euxm fontawesome fourier initials kpfonts \
     montserrat xcharter overlock ly1 cormorantgaramond charter cm-super \
