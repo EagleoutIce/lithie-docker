@@ -6,33 +6,43 @@ dependencies:
       grab-files: ["*.sty"]
     lithie-util:
       url: https://github.com/EagleoutIce/lithie-util
+      driver: git
       grab-files: ["*.sty", "*.ist"]
     color-palettes:
       url: https://github.com/EagleoutIce/color-palettes
+      driver: git
       grab-files: ["*.sty"]
     sopra-collection:
       url: https://github.com/EagleoutIce/sopra-collection
+      driver: git
       grab-files: ["**/*.sty=>./","**/*.cls=>./"]
       grab-dirs: ["sopra-listings/Languages=>Languages/"]
       dep: sltx-dep.yml
     beamer-themes:
       url: https://github.com/EagleoutIce/beamer-themes
+      driver: git
       grab-files: ["**/*.sty=>./"]
     tikz-bricks:
       url: https://github.com/EagleoutIce/tikz-bricks
+      driver: git
       grab-files: ["*.sty"]
     lilly-colors:
       url: https://github.com/EagleoutIce/lilly-colors
+      driver: git
       grab-files: ["*.sty"]
     lithie-boxes:
       url: https://github.com/EagleoutIce/lithie-boxes
+      driver: git
       grab-files: ["*.sty", "*.style"]
     lithie-dc:
       url: https://github.com/EagleoutIce/lithie-dc
+      driver: git
       grab-files: ["*.sty", "*.cls"]
     lilly:
       url: https://github.com/EagleoutIce/LILLY
+      driver: git
       grab-files: ["Lilly/**/*.cls", "Lilly/source/**/*.sty", "Lilly/source/**/*.def", "Lilly/source/**/*.lox", "Lilly/source/**/*.pro", "Lilly/source/**/*.tex", "Lilly/source/**/*.dict", "Lilly/source/**/GetAll.py"]
     bibliography:
       url: https://github.com/EagleoutIce/bibliography-collection
+      driver: git
       grab-files: ["*.bib"]

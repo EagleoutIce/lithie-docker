@@ -10,10 +10,11 @@ echo "Running update for target-profile \"${TARGET_PROFILE}\""
 
 echo "Update sltx"
 pip install --upgrade sltx
-sltx -t3 dependency /sltx-dep.yaml
+sltx -t2 dependency /sltx-dep.yaml
 sltx cls --cache
 
-echo "Rerun of mktexfmt"
+echo "Rerun of updmap & mktexfmt"
+updmap -sys
 mktexfmt pdflatex.fmt
 mktexfmt latex.fmt
 
