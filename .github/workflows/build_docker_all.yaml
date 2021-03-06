@@ -5,7 +5,7 @@ jobs:
   build:
     strategy:
       matrix:
-        profile: [tx-default] # , tx-small, tx-full]
+        profile: [tx-default, tx-small, tx-full]
       fail-fast: false
     name: Build container using the ${{ matrix.profile }}-base-image
     runs-on: ubuntu-latest
