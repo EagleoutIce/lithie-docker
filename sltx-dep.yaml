@@ -30,6 +30,10 @@ dependencies:
       url: https://github.com/EagleoutIce/lilly-colors
       driver: git
       grab-files: ["*.sty"]
+    latex-algorithm-bfs:
+      url: https://github.com/EagleoutIce/latex-algorithm-bfs
+      driver: git
+      grab-files: ["*.sty"]
     lithie-boxes:
       url: https://github.com/EagleoutIce/lithie-boxes
       driver: git
