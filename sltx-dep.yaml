@@ -12,6 +12,10 @@ dependencies:
       url: https://github.com/EagleoutIce/color-palettes
       driver: git
       grab-files: ["*.sty"]
+    tikzpingus:
+      url: https://github.com/EagleoutIce/tikzpingus
+      driver: git
+      grab-files: ["*.sty"]
     sopra-collection:
       url: https://github.com/EagleoutIce/sopra-collection
       driver: git
