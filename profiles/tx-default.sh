@@ -1,8 +1,8 @@
 tlmgr install latexmk biblatex biber bibtex8 texdef \
     academicons anonymouspro aurical barcodes calligra calligra-type1 crimson crimsonpro \
-    ebgaramond ebgaramond-maths euxm fontawesome fontawesome5 fourier initials kpfonts \
+    ebgaramond ebgaramond-maths fontawesome fontawesome5 fourier initials kpfonts \
     montserrat xcharter overlock ly1 cormorantgaramond charter cm-super \
-    courier eurosym helvetic marvosym tipa tex-gyre wasysym cyrillic biblatex-ieee cfr-initials newtx ccicons mathdesign chessfss eulervm
+    courier eurosym tex-gyre wasysym cyrillic biblatex-ieee cfr-initials newtx ccicons mathdesign chessfss eulervm
 
 # remove some weirdly large fonts
 rm -rf \
