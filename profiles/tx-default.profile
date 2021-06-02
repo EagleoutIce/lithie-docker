@@ -28,10 +28,11 @@ collection-langenglish 1
 collection-langeuropean 0
 collection-langgerman 1
 collection-latex 1
-collection-latexextra 1
+collection-latexextra 0
 collection-latexrecommended 1
 collection-luatex 0
-collection-mathscience 1
+# => See big block :D
+collection-mathscience 0
 collection-metapost 0
 collection-music 0
 collection-pictures 1
