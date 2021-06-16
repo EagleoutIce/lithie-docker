@@ -42,6 +42,10 @@ dependencies:
       url: https://github.com/EagleoutIce/latex-algorithm-bfs
       driver: git
       grab-files: ["*.sty"]
+    latex-generated-graphics:
+      url: https://github.com/EagleoutIce/latex-generated-graphics
+      driver: git
+      grab-files: ["*.sty"]
     lithie-boxes:
       url: https://github.com/EagleoutIce/lithie-boxes
       driver: git
