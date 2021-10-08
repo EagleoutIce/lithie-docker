@@ -62,3 +62,7 @@ dependencies:
       url: https://github.com/EagleoutIce/bibliography-collection
       driver: git
       grab-files: ["*.bib"]
+    hierarchy-jumpers:
+      url: https://github.com/EagleoutIce/latex-hierarchy-jumpers
+      driver: git
+      grab-files: ["*.sty"]
