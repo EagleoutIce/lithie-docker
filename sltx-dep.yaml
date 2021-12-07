@@ -66,3 +66,7 @@ dependencies:
       url: https://github.com/EagleoutIce/latex-hierarchy-jumpers
       driver: git
       grab-files: ["*.sty"]
+    tikz-qr:
+      url: https://github.com/EagleoutIce/tikz-qr
+      driver: git
+      grab-files: ["*.sty"]
