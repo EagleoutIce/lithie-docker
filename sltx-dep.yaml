@@ -70,3 +70,7 @@ dependencies:
       url: https://github.com/EagleoutIce/tikz-qr
       driver: git
       grab-files: ["*.sty"]
+    tikzdoggo:
+      url: https://github.com/EagleoutIce/tikzdoggo
+      driver: git
+      grab-files: ["*.sty"]
