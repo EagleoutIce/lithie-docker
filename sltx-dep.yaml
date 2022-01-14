@@ -15,7 +15,7 @@ dependencies:
     tikzpingus:
       url: https://github.com/EagleoutIce/tikzpingus
       driver: git
-      grab-files: ["*.sty"]
+      grab-files: ["*.sty", "*.lib.tex"]
     sopra-collection:
       url: https://github.com/EagleoutIce/sopra-collection
       driver: git
