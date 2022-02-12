@@ -4,7 +4,7 @@
 set -eu
 
 # Init user
-addgroup lithie-group && adduser lithie-user --home /root -D -G lithie-group
+addgroup --gid 1000 lithie-group && adduser --uid 1000 lithie-user --home /root --disabled-password --ingroup lithie-group
 
 # Desired profile for container
 TARGET_PROFILE="$1"
