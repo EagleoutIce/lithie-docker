@@ -74,6 +74,10 @@ dependencies:
       url: https://github.com/EagleoutIce/tikzdoggo
       driver: git
       grab-files: ["*.sty"]
+    infig:
+      url: https://github.com/EagleoutIce/infig
+      driver: git
+      grab-files: ["*.sty"]
     fancy-underline:
       url: https://github.com/EagleoutIce/fancy-underline
       driver: git
