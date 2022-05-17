@@ -18,6 +18,7 @@ USER root
 
 RUN chmod +x /setup-docker.sh && /setup-docker.sh ${target_profile}
 RUN chmod +x /update-docker.sh && /update-docker.sh ${target_profile}
+RUN add --update --no-cache font-fira-code
 
 USER lithie-user
 
