@@ -82,3 +82,7 @@ dependencies:
       url: https://github.com/EagleoutIce/fancy-underline
       driver: git
       grab-files: ["*.sty"]
+    bachelor-collection:
+      url: https://github.com/EagleoutIce/bachelor-collection
+      driver: git
+      grab-files: ["*.sty"]
