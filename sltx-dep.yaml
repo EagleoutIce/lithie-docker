@@ -86,3 +86,7 @@ dependencies:
       url: https://github.com/EagleoutIce/bachelor-collection
       driver: git
       grab-files: ["*.sty"]
+    code-animation:
+      url: https://github.com/EagleoutIce/code-animation
+      driver: git
+      grab-files: ["*.sty"]
