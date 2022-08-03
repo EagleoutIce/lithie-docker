@@ -78,8 +78,8 @@ dependencies:
       url: https://github.com/EagleoutIce/infig
       driver: git
       grab-files: ["*.sty"]
-    fancy-underline:
-      url: https://github.com/EagleoutIce/fancy-underline
+    latex-underline:
+      url: https://github.com/EagleoutIce/latex-underline
       driver: git
       grab-files: ["*.sty"]
     bachelor-collection:
