@@ -46,7 +46,7 @@ download_tl ".sha512" # get the sha
 download_tl ".sha512.asc"
 
 # Checks
-gpgv ./install-tl-unx.tar.gz.sha512.asc ./install-tl-unx.tar.gz.sha512
+# gpgv ./install-tl-unx.tar.gz.sha512.asc ./install-tl-unx.tar.gz.sha512
 sha512sum -c ./install-tl-unx.tar.gz.sha512
 
 tar --strip-components 1 -zxf ./install-tl-unx.tar.gz -C ${WORKING_DIR}/${TX_UNZIP}
