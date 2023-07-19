@@ -1,5 +1,5 @@
 apk add --no-cache file imagemagick
-apk add --no-cache make
+apk add --no-cache --update make
 apk add --no-cache file exiftool
 # font fira code is in edge testing
 echo "@testing http://dl-cdn.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories

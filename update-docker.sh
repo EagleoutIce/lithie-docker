@@ -18,6 +18,13 @@ updmap -sys
 mktexfmt pdflatex.fmt
 mktexfmt latex.fmt
 
+# update/install additional packages, if present
+PROFILE_AD="/profiles/${TARGET_PROFILE}.sh"
+if [ -f "${PROFILE_AD}" ]; then
+    echo "Running profile specific post-install script: \"${PROFILE_AD}\" (bash)"
+    bash ${PROFILE_AD}
+fi
+
 echo "Cleaning up afterwards to get a smaller container"
 # We clean doc and source to, if some profile wants to install them anyway
 rm -rf \

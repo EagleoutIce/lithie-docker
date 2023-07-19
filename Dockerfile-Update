@@ -9,6 +9,8 @@ ARG target_profile=tx-small
 
 ENV openout_any='a' PYTHONUNBUFFERED=1 PYTHONDONTWRITEBYTECODE=1 max_print_line=1000
 
+COPY profiles/${target_profile}.profile profiles/${target_profile}.sh \
+     /profiles/
 COPY LICENSE sltx-dep.yaml update-docker.sh /
 
 USER root
