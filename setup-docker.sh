@@ -16,8 +16,10 @@ echo " - Install Packages"
 apk add --update --no-cache bash python3 tar wget gnupg ghostscript perl xz git
 echo " - Setup python"
 ln -sf python3 /usr/bin/python
+python3 -m venv .venv
+. .venv/bin/activate
 python3 -m ensurepip
-pip3 install --no-cache --upgrade pip setuptools --break-system-packages
+pip3 install --no-cache --upgrade pip setuptools
 
 echo " - Preparing the texlive installation"
 # Install texlive itself
