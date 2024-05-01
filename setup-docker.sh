@@ -34,9 +34,9 @@ wget -q https://tug.org/texlive/files/texlive.asc
 gpg --no-default-keyring --keyring trustedkeys.kbx --import texlive.asc
 
 # We need a link to get the newest install-tl from:
-MIRROR_URL=$(wget -qS --spider --tries 5 http://mirror.ctan.org/ 2>&1 | sed -ne 's/.*Location: \(\w*\)/\1/p' | head -n 1)
+MIRROR_URL=$(wget -qS --spider --tries 5 https://mirror.ctan.org/ 2>&1 | sed -ne 's/.*Location: \(\w*\)/\1/p' | head -n 1)
 # use a default if the mirror is empty:
-MIRROR_URL=${MIRROR_URL:-"http://mirror.ctan.org/"}
+MIRROR_URL=${MIRROR_URL:-"https://mirror.ctan.org/"}
 echo "   - Using mirror '${MIRROR_URL}'"
 
 echo " - Starting download"
